@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 静态文件服务
+// 静态文件服务 - 适配Render环境
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // 内存数据存储（实际项目中应使用数据库）
@@ -54,7 +54,7 @@ app.post('/api/counter/increment', (req, res) => {
     res.json({ count: visitCount });
 });
 
-// 默认路由，返回前端页面
+// 默认路由，返回前端页面 - 适配Render环境
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });

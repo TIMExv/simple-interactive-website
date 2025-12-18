@@ -1,0 +1,12 @@
+# Render Configuration
+# This file contains configuration for deploying to Render
+
+# Build Command
+# This command is run after dependencies are installed but before the service starts
+# For this project, we don't need a build step as we're serving static files
+buildCommand: "echo 'No build step required'"
+
+# Start Command
+# This command starts your application
+# We use the start script from package.json
+startCommand: "npm start"

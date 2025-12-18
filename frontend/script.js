@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const visitCount = document.getElementById('visitCount');
     const incrementBtn = document.getElementById('incrementBtn');
 
-    // API基础URL
-    const API_BASE_URL = 'http://localhost:3000/api';
+    // API基础URL - 适配Render环境
+    const API_BASE_URL = window.location.origin + '/api';
 
     // 初始化函数
     const init = async () => {
