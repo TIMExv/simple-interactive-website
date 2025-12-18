@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单动态网站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>简单动态网站</h1>
+        </header>
+        
+        <main>
+            <section class="message-section">
+                <h2>留言板</h2>
+                <div class="message-form">
+                    <input type="text" id="nameInput" placeholder="您的名字" required>
+                    <input type="text" id="messageInput" placeholder="请输入留言内容" required>
+                    <button id="submitBtn">提交留言</button>
+                </div>
+                
+                <div class="messages-container">
+                    <h3>所有留言</h3>
+                    <div id="messagesList">
+                        <!-- 留言将在这里动态显示 -->
+                    </div>
+                </div>
+            </section>
+            
+            <section class="counter-section">
+                <h2>访问计数器</h2>
+                <div class="counter-display">
+                    <p>当前访问人数: <span id="visitCount">0</span></p>
+                    <button id="incrementBtn">增加访问人数</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
